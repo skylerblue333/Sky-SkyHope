@@ -1,44 +1,38 @@
-<!-- PORTFOLIO PROJECT PROFILE: maintained by the repository owner -->
+# SkyHope
 
-## Project profile and code-audit snapshot
+**Status: engineering beta / major-application core.** SkyHope currently provides a dependency-light TypeScript resource/referral domain layer for the SKYCOIN4444 ecosystem.
 
-**What this is:** **Sky-SkyHope** is a public repository described as: “Repository for the SkyHope component of the Sky ecosystem.” Its dominant language signals are **No dominant programming-language extension was detected in the sampled repository tree.**.
+It supports validated resource registration, category/tag filtering, and local referral-request intent. A referral object explicitly reports `externalSubmissionPerformed: false`; this repository does not claim that any provider, agency, shelter, school, clinic, employer, government office, or other organization received or accepted a request.
 
-**Why it has value:** Its value is best understood through the implementation evidence currently present in the repository: **6 tracked files** were observed in the shallow audit, with the source structure and existing documentation providing the project’s specific context. This README does not treat a prototype, experiment, or archive as a production system without supporting evidence.
+## Supported today
 
-**Implementation evidence:** No test-related file was detected by filename heuristics.; No dependency manifest was detected.; No CI, build, Docker, or infrastructure signal was detected by the audit.; and 4 documentation or governance file(s) detected. Test filenames observed include none detected. Dependency or package files include none detected. Build, CI, or infrastructure signals include none detected.
+- bounded support-resource directory;
+- categories for housing, food, health, education, employment, transport, legal, and other support;
+- deterministic tag matching;
+- inactive-resource filtering;
+- validated referral-request metadata;
+- strict TypeScript build and Node tests.
 
-**Current status:** The repository is tracked on the `main` branch. The existing source tree, configuration, tests, workflows, and documentation remain authoritative for supported behavior and maturity. A code audit is not a production-readiness certification, and the presence of a test or workflow file does not establish that all checks pass.
+## Not claimed
 
-**Relationship to the wider portfolio:** This repository is one focused component of the broader Skyler Blue Spillers portfolio across AI, software engineering, cloud and DevOps, cybersecurity, blockchain, finance, education, social systems, and creative work. It may provide a service boundary, implementation pattern, experiment, archive, or reusable idea for related repositories. Treat repositories as technical dependencies only where documented interfaces and verified project requirements support that relationship.
+This repository is **not** an emergency-response service, crisis hotline, benefits eligibility system, case-management platform, medical/legal advice system, provider network, payment system, identity-verification service, or verified production deployment. Resource data must be independently sourced, reviewed, and kept current by a real operating organization before user-facing deployment.
 
-**Quality and security note:** No obvious secret-like pattern was detected by the limited static scan; this is not a substitute for a security audit. No TODO/FIXME marker was detected in the scanned text files.
+## Development
 
----
+```bash
+npm install
+npm run check
+npm test
+```
 
-# Sky Skyhope
+## Integration
 
-![GitHub stars](https://img.shields.io/github/stars/skylerblue333/Sky-SkyHope?style=flat-square)
-![GitHub license](https://img.shields.io/github/license/skylerblue333/Sky-SkyHope?style=flat-square)
+The `SkyHopeDirectory` class can be consumed by SKYCOIN4444 as a resource-catalog and referral-intent boundary. A production service would still need durable storage, authentication and authorization, consent/privacy controls, audit logging, provider integrations, data freshness processes, observability, accessibility review, and deployment evidence.
 
-## 🌟 Overview
-**Sky-SkyHope** is a professional-grade project within the **SkyCoin4444** ecosystem. It focuses on delivering high-value solutions in the domain of **Software Development**.
+## Security and privacy
 
-## 🚀 Key Features
-- **Scalable Architecture**: Designed for enterprise-level growth and performance.
-- **Modern Standards**: Implements best practices for clean code and maintainability.
-- **Robust Integration**: Built to work seamlessly within modern cloud-native environments.
+The current core intentionally stores no personal case notes, medical details, legal records, credentials, or payment data. Callers should avoid attaching sensitive personal data to identifiers or tags and must implement appropriate privacy controls before extending this core.
 
-## 🛠️ Technology Stack
-- **Primary Domain**: Software Development
-- **Ecosystem**: SkyCoin4444 Digital Platform
+## License
 
-## 📂 Structure
-The project is organized into a modular structure to ensure clarity and ease of development.
-
-## 👨‍💻 Author
-**Skyler Blue Spillers**
-*Professional Chess Player & Software Engineer*
-
----
-*Powered by SkyCoin4444*
+See `LICENSE`.
