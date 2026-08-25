@@ -1,3 +1,5 @@
+export * from "./fundraising.js";
+
 export type SupportCategory = "housing" | "food" | "health" | "education" | "employment" | "transport" | "legal" | "other";
 
 export interface SupportResource {
